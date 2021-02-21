@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Random Background | Change Background Image Every Second With CSS & JavaScript</title>
+    <link rel="stylesheet" type="text/css" href="style51.css">
+</head>
+<body>
+    <section>
+        <h2>Random</h2>
+    </section>
+    <script>
+        function changeBg(){
+
+            const images = [
+            'url(Folder/image1.jpg)',
+                'url(Folder/image2.jpg)',
+                'url(Folder/image3.jpg)',
+                'url(Folder/image4.jpg)',
+                'url(Folder/image5.jpg)',
+                'url(Folder/image6.jpg)',
+                'url(Folder/img1.jpg)',
+                'url(Folder/img2.jpg)',
+                'url(Folder/img3.jpg)',
+                'url(Folder/img4.jpg)',
+                'url(Folder/img5.jpg)',
+                'url(Folder/img6.jpg)',
+
+            ]
+
+            const section = document.querySelector('section')
+            const bg = images[Math.floor(Math.random() * images.length)];
+            section.style.backgroundImage = bg;
+        }
+
+        setInterval(changeBg, 1000)
+    </script>
+</body>
+</html>
+
+<!---
+    <script>
+        function changeBg(){
+            const image = [
+                'url(Folder/image1.jpg)',
+                'url(Folder/image2.jpg)',
+                'url(Folder/image3.jpg)',
+                'url(Folder/image4.jpg)',
+                'url(Folder/image5.jpg)',
+                'url(Folder/image6.jpg)',
+            ]
+        }
+    </script>
